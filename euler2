@@ -1,0 +1,12 @@
+#Considérons, la suite harmonique :
+#
+# Hn =1+1/2 + 1/3 +1/4+ ...+1/n
+#
+# et définissons
+# Un = Hn + ln(n); et lim Un,(n->+oo)= constante d'Euler
+ 
+def euler2(n):
+	somme = 0
+	for i in range(n,0,-1):
+		somme = somme + 1/i
+	return somme - log(n+1/2+1/(24*n))
